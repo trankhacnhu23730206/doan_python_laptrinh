@@ -1,0 +1,11 @@
+fastapi~=0.115.14
+uvicorn
+python-dotenv~=1.1.1
+pydantic-settings~=2.10.1
+passlib[bcrypt]~=1.7.4
+python-jose[cryptography]~=3.5.0
+pymysql
+SQLAlchemy~=2.0.41
+pydantic~=2.11.7
+starlette~=0.46.2
+python-multipart
