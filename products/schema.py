@@ -1,8 +1,11 @@
 from pydantic import BaseModel
 
-class CreateProductRequest(BaseModel):
+class ProductRequest(BaseModel):
     name: str
+    location: str
+    price_now: int
+    note: str
     is_register: bool
-    phone: str
+
     category_id: int
     company_id: int

@@ -20,7 +20,7 @@ async def create_user(data: CreateUserRequest, db: Session = Depends(getdatabase
     return JSONResponse(content=payload)
 
 
-@router.post('/me', status_code=status.HTTP_200_OK)
+@router.get('/me', status_code=status.HTTP_200_OK)
 async def check_profile(request: Request):
     user = request.state.user
 

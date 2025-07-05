@@ -16,3 +16,4 @@ router = APIRouter(
 async def get_categories(db: Session = Depends(getdatabase)):
     return await get_all_categories(db=db)
 
+

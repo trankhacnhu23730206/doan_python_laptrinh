@@ -42,9 +42,6 @@ app.include_router(router=category_router)
 app.include_router(router=registration_router)
 
 
-
-
-
 @app.get("/")
 def health_check():
     return "oke file name"
