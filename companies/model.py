@@ -14,4 +14,6 @@ class CompanyModel(Base):
 
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     category_id = Column(Integer, ForeignKey("categories.id"), nullable=False)
+
     category = relationship("CategoryModel", back_populates="companies")
+    products = relationship("ProductModel", back_populates="company")

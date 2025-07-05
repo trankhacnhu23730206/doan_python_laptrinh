@@ -11,4 +11,5 @@ class CategoryModel(Base):
 
 
     companies = relationship("CompanyModel", back_populates="category")
+    products = relationship("ProductModel", back_populates="category")
 

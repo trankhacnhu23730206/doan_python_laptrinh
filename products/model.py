@@ -1,6 +1,7 @@
-from xmlrpc.client import Boolean
 
-from sqlalchemy import Column, Integer, String, ForeignKey, Boolean, Text, DECIMAL, DateTime, func
+from sqlalchemy import Column, Integer, String, ForeignKey, Boolean, Text, DateTime, func
+from sqlalchemy.orm import relationship
+
 from core.database import Base
 
 class ProductModel(Base):
@@ -9,7 +10,7 @@ class ProductModel(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(100),  unique=True, nullable=False)
     location = Column(String(100), nullable=False)
-    price_now = Column(DECIMAL(10, 2), nullable=False)
+    price_now = Column(Integer, nullable=False)
 
     note = Column(Text, nullable=True)
     is_register = Column(Boolean, nullable=False)
@@ -20,3 +21,6 @@ class ProductModel(Base):
 
     created_at = Column(DateTime, nullable=False, server_default=func.now())
 
+    # Quan hệ với bảng categories và companies
+    category = relationship("CategoryModel", back_populates="products")
+    company = relationship("CompanyModel", back_populates="products")

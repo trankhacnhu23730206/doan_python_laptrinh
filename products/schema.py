@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 class ProductRequest(BaseModel):
@@ -9,3 +11,12 @@ class ProductRequest(BaseModel):
 
     category_id: int
     company_id: int
+
+
+class UpdateProductRequest(BaseModel):
+    name: Optional[str]
+    location: Optional[str]
+    price_now: Optional[int]
+    note: Optional[str]
+    category_id: Optional[int]
+    company_id: Optional[int]
