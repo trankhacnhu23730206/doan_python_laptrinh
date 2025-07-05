@@ -1,50 +1,22 @@
 # doan_laptrinhpython
 Project Do An cho mon lap trinh Python 
 
+Thời gian khởi tạo đồ án và lên ý tưởng tầm sau 2-3 tuần biết được cuối kì sẽ làm đồ án về lập trình
 
--- 1. Bảng người dùng (Cộng tác viên)
-CREATE TABLE users (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    full_name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE,
-    phone VARCHAR(20),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+DATABASE lựa chọn trong dự án này là MYSQL
 
--- 2. Bảng công ty quản lý sản phẩm
-CREATE TABLE companies (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
-);
+Ngôn ngữ lập trình chính cho BackEnd là PYTHON
+FRAMEWORK chính được chọn là FASTAPI
 
--- 3. Bảng danh mục sản phẩm
-CREATE TABLE categories (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
-);
+Cấu trúc source code được chia theo modul monolith
 
--- 4. Bảng sản phẩm
-CREATE TABLE products (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    category_id BIGINT,
-    company_id BIGINT,
-    FOREIGN KEY (category_id) REFERENCES categories(id),
-    FOREIGN KEY (company_id) REFERENCES companies(id)
-);
+File requirement.txt dùng để cài đặt thư viện của các library được sử dụng trong source code 
 
--- 5. Bảng cộng tác viên đăng ký bán sản phẩm
-CREATE TABLE product_registrations (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    user_id BIGINT,
-    product_id BIGINT,
-    import_price DECIMAL(10, 2) NOT NULL,
-    quantity INT NOT NULL,
-    import_date DATE NOT NULL,
-    note TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (product_id) REFERENCES products(id)
-);
-
-
+Cách start source code đó là: 
+    1 Git clone source code
+    2 Bật terminal ở IDE 
+    3 Kiểm tra đã cài đặt Python và Pip chưa
+    4 CD đến source code mà bạn mới vừa clone về
+    5 Nhập lệnh ở terminal sau đây để cài đặt thư viện: pip install requirements.txt
+    6 Bạn nên cài đặt database MYSQL trước và để schema giống như đường dẫn trong folder core của source code nhá
+    7 Sau đó bạn nhập lệnh sau để start source code: python.fastapi
