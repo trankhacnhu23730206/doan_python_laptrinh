@@ -18,4 +18,12 @@ Cách start source code đó là
 
 2 Bật terminal ở IDE 
 
-Test
+3 Kiểm tra đã cài đặt Python và Pip chưa
+
+4 CD đến source code mà bạn mới vừa clone về
+
+5 Nhập lệnh ở terminal sau đây để cài đặt thư viện: pip install requirements.txt
+
+6 Bạn nên cài đặt database MYSQL trước và để schema giống như đường dẫn trong folder core của source code nhá
+
+7 Sau đó bạn nhập lệnh sau để start source code: python.fastapi
