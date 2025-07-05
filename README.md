@@ -12,7 +12,7 @@ Cấu trúc source code được chia theo modul monolith
 
 File requirement.txt dùng để cài đặt thư viện của các library được sử dụng trong source code 
 
-Cách start source code đó là: 
+Cách start source code đó là
 
 1 Git clone source code
 2 Bật terminal ở IDE 
