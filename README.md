@@ -14,5 +14,8 @@ File requirement.txt dùng để cài đặt thư viện của các library đư
 
 Cách start source code đó là
 
-Git clone source code
-Bật terminal ở IDE 
+Test
+
+Test
+
+Test
