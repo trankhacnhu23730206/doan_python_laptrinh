@@ -29,4 +29,4 @@ Cách start source code đó là:
 
 6 Bạn nên cài đặt database MYSQL trước và để schema giống như đường dẫn trong folder core của source code nhá
 
-7 Sau đó bạn nhập lệnh sau để start source code: python.fastapi
+7 Sau đó bạn nhập lệnh sau để start source code: python main.py
